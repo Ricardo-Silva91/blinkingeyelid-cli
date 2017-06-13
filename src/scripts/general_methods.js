@@ -24,7 +24,7 @@ export function getAlbum(cb) {
 export function getTotalTracks(cb) {
 
     //const url_rest = url_base + '/getTotalTracks';
-    const url_rest = '/api/getTotalTracks';
+    const url_rest = 'getTotalTracks';
 
     fetch(url_rest)
         .then((response) => response.json())

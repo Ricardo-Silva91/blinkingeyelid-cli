@@ -6,7 +6,7 @@ const url_base = "https://blinde.herokuapp.com/blindness";
 
 export function getAlbum(cb) {
 
-    const url_rest = 'https://blinde.herokuapp.com/blindness/getTotalTracks';
+    const url_rest = 'https://blinde.herokuapp.com/blindness/getRandomAlbum';
     //const url_rest = '/getRandomAlbum';
 
     fetch(url_rest)
@@ -23,7 +23,7 @@ export function getAlbum(cb) {
 };
 export function getTotalTracks(cb) {
 
-    const url_rest = url_base + '/getTotalTracks';
+    const url_rest = 'https://blinde.herokuapp.com/blindness/getTotalTracks';
     //const url_rest = 'getTotalTracks';
 
     fetch(url_rest)

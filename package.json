@@ -1,0 +1,22 @@
+{
+  "name": "blinkingeyelid-cli",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "randomstring": "^1.1.5",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-file-download": "^0.3.4",
+    "react-native-fetch-blob": "^0.10.5"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.7"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:666"
+}

@@ -1,0 +1,69 @@
+html, body {
+    margin: 0;
+}
+
+.App {
+    height: 100%;
+    text-align: center;
+    background-color: #000000;
+    color: #fffff1;
+}
+
+.app-text {
+    animation: app-text-opacity infinite 40s linear;
+    font-family: "Lucida Console","Lucida Sans Typewriter",monaco,"Bitstream Vera Sans Mono",monospace;
+}
+
+.App-logo {
+    animation: App-logo-spin infinite 15s linear;
+    height: 80px;
+}
+
+.App-logo-container {
+    animation: App-logo-container-spin infinite 10s linear;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+}
+
+.App-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+}
+
+.App-intro {
+    font-size: large;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes App-logo-container-spin {
+    from {
+    }
+    to {
+    }
+}
+
+@keyframes app-text-opacity {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

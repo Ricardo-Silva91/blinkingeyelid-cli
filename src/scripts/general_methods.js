@@ -2,8 +2,11 @@
  * Created by Ricardo on 13/06/2017.
  */
 
+//const url_base = "http://94.63.5.193:5002";
+
 export function getAlbum(cb) {
 
+    //const url_rest = url_base + '/getRandomAlbum';
     const url_rest = '/getRandomAlbum';
 
     fetch(url_rest)
@@ -20,6 +23,7 @@ export function getAlbum(cb) {
 };
 export function getTotalTracks(cb) {
 
+    //const url_rest = url_base + '/getTotalTracks';
     const url_rest = '/getTotalTracks';
 
     fetch(url_rest)

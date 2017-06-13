@@ -14,21 +14,33 @@ class App extends Component {
         super(props);
         this.state = {
             theFile: undefined,
-            totalTracks: 0
+            totalTracks: 0,
+            message: ''
         };
     }
 
     getAlbumMe() {
+      this.setState(
+        {
+          message: 'Wait For Download'
+        }
+      );
+
         getAlbum((response) => {
-                this.setState({theFile: response === false ? 'no' : response});
-                fileDownload(response, randomstring.generate() + '.zip');
+                this.setState(
+                  {
+                    theFile: response === false ? 'no' : response,
+                    message: response === false ? 'Server Not Alive' : ''
+                  }
+                );
+                fileDownload(this.state.theFile, randomstring.generate() + '.zip');
             }
         );
     }
 
     getTotalTracksMe() {
         getTotalTracks((response) => {
-                this.setState({totalTracks: response === false ? 0 : response.totalTracks});
+                this.setState({totalTracks: response === false ? 'server not alive' : response.totalTracks});
             }
         );
     }
@@ -47,6 +59,7 @@ class App extends Component {
                     <h1>Get a Random Beat Tape</h1>
                     <h3>7 tracks how of {this.state.totalTracks} total</h3>
                 </div>
+                <h1>{this.state.message}</h1>
                 <a className="App-logo-container" href="#nothing" onClick={() => {
                     this.getAlbumMe()
                 }}>

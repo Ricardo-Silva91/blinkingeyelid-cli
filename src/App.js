@@ -60,9 +60,7 @@ class App extends Component {
                     <h3>7 tracks how of {this.state.totalTracks} total</h3>
                 </div>
                 <h1>{this.state.message}</h1>
-                <a className="App-logo-container" href="#nothing" onClick={() => {
-                    this.getAlbumMe()
-                }}>
+                <a className="App-logo-container" href="https://blinde.herokuapp.com/blindness/getRandomAlbum">
                     <img src={logos[(Math.floor(Math.random() * logos.length - 1) + 1)]} className="App-logo"
                          alt="logo"/>
                 </a>
